@@ -1,0 +1,24 @@
+# Dependencies and generated output
+node_modules/
+dist/
+.vite/
+
+# Local environment and configuration
+.env
+.env.*
+!.env.example
+*.local
+
+# Recoverable local work backups
+.backup-*/
+
+# Editor, OS, and local tooling files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+Microsoft/
+
+# Logs and coverage
+*.log
+coverage/

@@ -1,0 +1,38 @@
+/* ─── Marching Ants Selection Overlay ──────────────────────────────── */
+
+@keyframes marchingAntsBlack {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 16;
+  }
+}
+
+@keyframes marchingAntsWhite {
+  from {
+    stroke-dashoffset: 8;
+  }
+  to {
+    stroke-dashoffset: 24;
+  }
+}
+
+.selection-overlay-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 40;
+  overflow: visible;
+}
+
+.selection-ants-black {
+  animation: marchingAntsBlack 1s linear infinite;
+  shape-rendering: geometricPrecision;
+}
+
+.selection-ants-white {
+  animation: marchingAntsWhite 1s linear infinite;
+  shape-rendering: geometricPrecision;
+}

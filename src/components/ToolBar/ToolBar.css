@@ -1,0 +1,124 @@
+.toolbar-container {
+  width: var(--toolbar-width);
+  background-color: var(--bg-surface);
+  border-right: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 0;
+  gap: 4px;
+  z-index: 50;
+  flex-shrink: 0;
+}
+
+.tool-button {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  position: relative;
+  transition: all 0.12s ease;
+}
+
+.tool-button:hover {
+  background-color: var(--bg-surface-hover);
+  color: var(--text-primary);
+}
+
+.tool-button.active {
+  background-color: var(--accent-subtle);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+.tool-shortcut-badge {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  font-size: 8px;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  line-height: 1;
+}
+
+.tool-button.active .tool-shortcut-badge {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.toolbar-divider {
+  width: 28px;
+  height: 1px;
+  background-color: var(--border-subtle);
+  margin: 6px 0;
+}
+
+.color-swatches-section {
+  position: relative;
+  width: 36px;
+  height: 44px;
+  margin-top: auto;
+  margin-bottom: 6px;
+}
+
+.swatch-box {
+  width: 22px;
+  height: 22px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  position: absolute;
+  transition: transform 0.1s ease;
+}
+
+.swatch-foreground {
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.swatch-background {
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.swatch-swap-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.swatch-swap-btn:hover {
+  color: var(--text-primary);
+}
+
+.swatch-reset-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 9px;
+}
+
+.swatch-reset-btn:hover {
+  color: var(--text-primary);
+}

@@ -1,0 +1,212 @@
+/* ─── Crop Overlay Styling ─────────────────────────────────────────────── */
+
+.crop-overlay-root {
+  position: absolute;
+  inset: 0;
+  z-index: 25;
+  pointer-events: none;
+  overflow: visible;
+}
+
+/* Background click surface to draw a new crop box */
+.crop-backdrop-surface {
+  position: absolute;
+  inset: 0;
+  pointer-events: auto;
+  cursor: crosshair;
+}
+
+/* The active crop selection rectangle */
+.crop-box {
+  position: absolute;
+  box-sizing: border-box;
+  /* Dim entire exterior using spread box-shadow */
+  box-shadow: 0 0 0 100000px rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  outline: 1px dashed rgba(0, 0, 0, 0.7);
+  outline-offset: -1px;
+  pointer-events: auto;
+  cursor: move;
+}
+
+/* Rule of Thirds Grid */
+.crop-grid-line {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+}
+
+.crop-grid-line.h-1 {
+  top: 33.333%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.crop-grid-line.h-2 {
+  top: 66.666%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.crop-grid-line.v-1 {
+  left: 33.333%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  box-shadow: 0.5px 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.crop-grid-line.v-2 {
+  left: 66.666%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  box-shadow: 0.5px 0 1px rgba(0, 0, 0, 0.5);
+}
+
+/* Dimension Badge */
+.crop-dim-badge {
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(18, 18, 20, 0.92);
+  color: #fff;
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Floating quick commit buttons */
+.crop-action-pill {
+  position: absolute;
+  top: -34px;
+  right: 0;
+  display: flex;
+  gap: 4px;
+  background: rgba(22, 22, 26, 0.95);
+  padding: 3px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  pointer-events: auto;
+}
+
+.crop-pill-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.1s, color 0.1s;
+}
+
+.crop-pill-btn.apply {
+  background-color: var(--accent-primary, #0078d4);
+  color: #fff;
+}
+
+.crop-pill-btn.apply:hover {
+  background-color: var(--accent-primary-hover, #1084d8);
+}
+
+.crop-pill-btn.cancel {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary, #f4f4f5);
+}
+
+.crop-pill-btn.cancel:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Draggable Handles */
+.crop-handle {
+  position: absolute;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 1.5px solid #1a1a1e;
+  border-radius: 1px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  pointer-events: auto;
+  z-index: 10;
+}
+
+/* Base size in unscaled CSS pixels */
+.crop-handle-corner {
+  width: 12px;
+  height: 12px;
+}
+
+.crop-handle-edge-h {
+  width: 18px;
+  height: 8px;
+}
+
+.crop-handle-edge-v {
+  width: 8px;
+  height: 18px;
+}
+
+/* Handle Positions & Cursors */
+.crop-handle.nw {
+  top: 0;
+  left: 0;
+  cursor: nwse-resize;
+}
+
+.crop-handle.ne {
+  top: 0;
+  right: 0;
+  cursor: nesw-resize;
+}
+
+.crop-handle.se {
+  bottom: 0;
+  right: 0;
+  cursor: nwse-resize;
+}
+
+.crop-handle.sw {
+  bottom: 0;
+  left: 0;
+  cursor: nesw-resize;
+}
+
+.crop-handle.n {
+  top: 0;
+  left: 50%;
+  cursor: ns-resize;
+}
+
+.crop-handle.s {
+  bottom: 0;
+  left: 50%;
+  cursor: ns-resize;
+}
+
+.crop-handle.e {
+  top: 50%;
+  right: 0;
+  cursor: ew-resize;
+}
+
+.crop-handle.w {
+  top: 50%;
+  left: 0;
+  cursor: ew-resize;
+}
