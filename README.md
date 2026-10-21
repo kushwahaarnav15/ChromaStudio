@@ -71,6 +71,23 @@ npm run build
 - There is no project-file save format, layer masks, or clipboard integration.
 - The app is client-side only and does not require API credentials.
 
+## Screenshots
+
+Screenshots are intentionally not included until they are captured from the running ChromaStudio application. Add real images to `docs/screenshots/` using the filenames below, then replace the corresponding instruction with a Markdown image link.
+
+| Capture | Suggested filename | What to show |
+| --- | --- | --- |
+| Main editor | `main-editor.png` | An image loaded in the editor at a useful zoom level. |
+| Mixed layers | `mixed-layers.png` | Raster, text, shape, and adjustment layers visible in the Layers panel. |
+| Text and shapes | `text-shapes.png` | Text editing plus shape-tool controls or a selected vector layer. |
+| Adjustments and transforms | `adjustments-transforms.png` | An adjustment layer with transform controls applied to a layer. |
+
+Capture at a consistent browser size, remove private image content, and use only screenshots of this application.
+
+## GitHub Pages
+
+After the Pages workflow has deployed successfully, the application is expected at [https://kushwahaarnav15.github.io/ChromaStudio/](https://kushwahaarnav15.github.io/ChromaStudio/).
+
 ## GitHub publication
 
 Commit source, tests, `package.json`, `package-lock.json`, `README.md`, `.gitignore`, `index.html`, and `vite.config.js`. Do not commit `node_modules`, `dist`, local `.env` files, `.backup-*` folders, or editor/OS cache files.
