@@ -73,16 +73,17 @@ npm run build
 
 ## Screenshots
 
-Screenshots are intentionally not included until they are captured from the running ChromaStudio application. Add real images to `docs/screenshots/` using the filenames below, then replace the corresponding instruction with a Markdown image link.
+### Main editor and Layers
 
-| Capture | Suggested filename | What to show |
-| --- | --- | --- |
-| Main editor | `main-editor.png` | An image loaded in the editor at a useful zoom level. |
-| Mixed layers | `mixed-layers.png` | Raster, text, shape, and adjustment layers visible in the Layers panel. |
-| Text and shapes | `text-shapes.png` | Text editing plus shape-tool controls or a selected vector layer. |
-| Adjustments and transforms | `adjustments-transforms.png` | An adjustment layer with transform controls applied to a layer. |
+![ChromaStudio editor with an image loaded and the Layers panel visible](docs/screenshots/main-editor-layers.png)
 
-Capture at a consistent browser size, remove private image content, and use only screenshots of this application.
+The editor canvas, transform controls, and mixed layer stack in use.
+
+### Keyboard shortcuts
+
+![ChromaStudio keyboard shortcuts dialog](docs/screenshots/keyboard-shortcuts.png)
+
+The in-app shortcut reference for tools, selections, history, export, and viewport controls.
 
 ## GitHub Pages
 
